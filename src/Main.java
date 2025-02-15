@@ -2,16 +2,16 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int x = 333; // количество денег на счету клиента перед пополнением
-        int y = 14_924; // количество денег для пополнения счета клиента
-        int z; // бонусы клиента после пополнения
-        int a; // количество денег на счету клиента после пополнения
-        if (y >= 1000) {
-            z = y/100;
+        int checkTo = 333; // количество денег на счету клиента перед пополнением
+        int money = 14_924; // количество денег для пополнения счета клиента
+        int bonus; // бонусы клиента после пополнения
+        int checkAfter; // количество денег на счету клиента после пополнения
+        if (money >= 1000) {
+            bonus = money / 100;
         } else {
-            z = 0;
+            bonus = 0;
         }
-        a = x+y+z;
-            System.out.println("Бонусов начислено " + z + ", Баланс счета " + a);
-        }
+        checkAfter = checkTo + money + bonus;
+        System.out.println("Бонусов начислено " + bonus + ", Баланс счета " + checkAfter);
     }
+}
